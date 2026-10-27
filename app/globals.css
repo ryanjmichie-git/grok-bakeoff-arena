@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bench: #e4ebef;
+  --color-plate: #f7fafb;
+  --color-ink: #122028;
+  --color-enamel: #0c5c66;
+  --color-tin: #8d9ea6;
+  --color-oxide: #7c2d12;
+}
+
+html {
+  background: var(--color-bench);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bench);
+  color: var(--color-ink);
+  font-family: "Segoe UI", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-enamel);
+  outline-offset: 2px;
+}
+
+input[type="date"] {
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
